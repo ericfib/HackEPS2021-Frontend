@@ -8,7 +8,7 @@ const router = createRouter({
         {
             path: '/',
             component: HelloWorld,
-            props: { msg="Collaborative shop" }
+            props: { }
         },
         {
             path: '/items',
@@ -17,3 +17,5 @@ const router = createRouter({
         }
     ]
 })
+
+export default router
