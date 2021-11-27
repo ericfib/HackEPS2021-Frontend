@@ -1,12 +1,14 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import listitems from './components/listitems.vue'
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <listitems name="APPLE" />
+  <listitems description="DESCRIPTION GOES HERE" />
+  <listitems price="4500" />
+  <listitems imageurls="https://dummyimage.com/720x400" />
 </template>
 
 <style>
