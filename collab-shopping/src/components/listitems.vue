@@ -14,6 +14,7 @@ const count = ref(0)
 </script>
 
 <template>
+  <button @click="goTo('/')">Go to home</button>
 
 <section class="text-gray-600 body-font">
   <div class="container px-5 py-24 mx-auto">
