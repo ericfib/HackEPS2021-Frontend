@@ -7,8 +7,8 @@
       <div class="search-container">
         <form>
           <input type="text" placeholder="Search.." name="search" v-model="search_word">
-          <button type="submit" id="search"><img src="./../assets/shopping-cart-solid.svg" alt=""></button>
-          <button type="carro" id="carro"><img src="./../assets/search-solid.svg" alt=""></button>
+          <button type="submit" id="carro"><img src="./../assets/shopping-cart-solid.svg" alt=""></button>
+          <button type="carro" id="search"><img src="./../assets/search-solid.svg" alt=""></button>
         </form>
       </div>
     </div>
