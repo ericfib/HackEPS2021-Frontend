@@ -15,7 +15,7 @@
         </form>
       </div>
     </div>
-    </header>  
+    </header>
   <!-- header opcional?--> 
   <section class="text-gray-600 body-font">
   <div class="container px-5 py-24 mx-auto">
@@ -40,7 +40,7 @@
           <tr v-for="item in items" :key="item">
             <td class="px-4 py-3">{{item.name}}</td>
             <td class="px-4 py-3">{{item.description}}</td>
-            <td class="px-4 py-3">{{item.quantity}}</td>
+            <td class="px-4 py-3">{{item.quantity}}</td>ç
             
             <td class="px-4 py-3 text-lg text-gray-900">{{item.price}}</td>
           </tr>

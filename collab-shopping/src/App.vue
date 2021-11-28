@@ -3,7 +3,6 @@
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import HomePage from './components/HomePage.vue'
 import ListItems from './components/ListItems.vue'
-
 </script>
 
 <template>

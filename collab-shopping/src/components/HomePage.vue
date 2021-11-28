@@ -84,7 +84,6 @@ export default {
 
   methods: {
     async reload() {
-<<<<<<< HEAD
       const {data:d}=await myApi.get("/roomProducts")
       this.info = d.products
     },
@@ -107,12 +106,6 @@ export default {
     clearInterval(this.timer);
   }
 
-=======
-      const { data: d } = await myApi.get("/products");
-      this.info = d.products;
-    },
-  },
->>>>>>> c1f66ad943899bb974b03b6a0232771c9ca7b969
 };
 
 
