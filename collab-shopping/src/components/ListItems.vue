@@ -6,9 +6,9 @@
       <a class="active animate__rubberBand" href="/" id="title">CartFresh</a>      
       <div class="search-container">
         <form>
-          <input type="text" placeholder="Search.." name="search" v-model="search_word">
+          <input type="text" placeholder="Search.." name="search">
           <button type="submit" id="search"><img src="./../assets/shopping-cart-solid.svg" alt=""></button>
-          <button type="carro" id="carro"><img src="./../assets/search-solid.svg" alt=""></button>
+          <button id="carro"><img src="./../assets/search-solid.svg" alt=""></button>
         </form>
       </div>
     </div>
