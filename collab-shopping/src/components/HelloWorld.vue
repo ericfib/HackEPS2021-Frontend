@@ -1,7 +1,7 @@
 <template>
 <header class="text-gray-600 body-font">
       <div class="topnav">
-      <a class="active animate__rubberBand" href="/" id="title">Shopper</a>      
+      <a class="active animate__rubberBand" href="/" id="title">CartFresh</a>      
       <div class="search-container">
         <router-link :to="{path: '/items'}" class="" style="float:right; padding:0px">
           <button type="submit" id="carro"><img src="./../assets/shopping-cart-solid.svg" alt=""></button>

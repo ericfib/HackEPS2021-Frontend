@@ -2,10 +2,13 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import HelloWorld from './components/HelloWorld.vue'
+import ListItems from './components/ListItems.vue'
 </script>
 
 <template>
-  <HelloWorld></HelloWorld>
+  <div id="app">
+    <router-view></router-view>
+  </div>
 </template>
 
 <style>
