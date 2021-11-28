@@ -13,16 +13,21 @@
     <section class="text-gray-600 body-font">
       <div class="container px-5 py-24 mx-auto">
         <div class="flex flex-wrap -m-4">
-            <div class="p-4 md:w-1/3" v-for="item in info" :key="item">
+            <div class="p-4 md:w-1/4">
               <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
                 <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/722x402" alt="blog">
                 <div class="p-6">
                   <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Fruits</h2>
-                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{ item.name }}</h1>
-                  <p class="leading-relaxed mb-3">{{ item.description }}</p>
-                  <div class="flex items-center flex-wrap ">
-                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Buy
-                    </a>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">aaaaaa</h1>
+                  <p class="leading-relaxed mb-3"></p>
+                  <div class="flex items-center flex-wrap justify-content:right">
+                    
+                    <button style="justify-content: right" class="justify-content:right inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+                      <img src="./../assets/minus-solid.svg" alt="" width="25em"> 
+                    </button>
+                    <button style="justify-content: right" class="float:right inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+                      <img src="./../assets/plus-solid.svg" alt="" width="25em"> 
+                    </button>
                   </div>
                 </div>
               </div>
@@ -60,4 +65,5 @@ export default {
 
 
 <style scoped>
+
 </style>
