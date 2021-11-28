@@ -3,7 +3,7 @@
 <header class="text-gray-600 body-font">
       <div class="topnav">
       <!--this is listitems-->
-      <a class="active animate__rubberBand" href="/">Cart</a>      
+      <a class="active animate__rubberBand" href="/" id="title">CartFresh</a>      
       <div class="search-container">
         <form>
           <input type="text" placeholder="Search.." name="search" v-model="search_word">
@@ -48,23 +48,16 @@
       </table>
     </div>
     <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
-      <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" v-bind:href="'/'">Return Back
+      <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" v-bind:href="'/'">Return Back<i class="fas fa-arrow-left"></i>
       </a>
-      <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Checkout&nbsp;&nbsp;&nbsp; <img src="./../assets/shopping-cart-solid.svg" width="20px"></button>
+      <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Checkout<i class="fas fa-shopping-cart"></i></button>
     </div>
   </div>
 </section>
-
-
-
-
-  <button @click="goTo('/')">Go to home</button>
-
-
-
   </template>
+
   <style>
-  @import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
+ @import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
   /*this is hellowrold*/
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"); 
 * {box-sizing: border-box;}
@@ -165,4 +158,8 @@ body {
 
 #carro, #search {
   width: 40px;
-} </style>
+}
+i {
+  margin-left: 8px;
+}
+</style>
