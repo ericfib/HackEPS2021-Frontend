@@ -48,7 +48,7 @@
       </table>
     </div>
     <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
-      <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" v-bind:href="'/'">Return Back<i class="fas fa-arrow-left"></i>
+      <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" v-bind:href="'/'"><i class="fas fa-arrow-left">Return Back</i>
       </a>
       <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Checkout<i class="fas fa-shopping-cart"></i></button>
     </div>
@@ -161,5 +161,6 @@ body {
 }
 i {
   margin-left: 8px;
+  margin-right: 8px;
 }
 </style>
