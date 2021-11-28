@@ -1,14 +1,26 @@
 <template>
-<header class="text-gray-600 body-font">
-      <div class="topnav">
-      <a class="active animate__rubberBand" href="/" id="title">CartFresh</a>      
+  <header class="text-gray-600 body-font">
+    <div class="topnav">
+      <a class="active animate__rubberBand" href="/" id="title">CartFresh</a>
       <div class="search-container">
-        <router-link :to="{path: '/items'}" class="" style="float:right; padding:0px">
-          <button type="submit" id="carro"><img src="./../assets/shopping-cart-solid.svg" alt=""></button>
+        <router-link
+          :to="{ path: '/items' }"
+          class=""
+          style="float: right; padding: 0px"
+        >
+          <button type="submit" id="carro">
+            <img src="./../assets/shopping-cart-solid.svg" alt="" />
+          </button>
         </router-link>
-          <input type="text" placeholder="Search.." name="search" v-model="search_word">
-          <button type="carro" id="search" :to="{path: '/items'}"><img src="./../assets/search-solid.svg" alt=""></button>
-         
+        <input
+          type="text"
+          placeholder="Search.."
+          name="search"
+          v-model="search_word"
+        />
+        <button type="carro" id="search" :to="{ path: '/items' }">
+          <img src="./../assets/search-solid.svg" alt="" />
+        </button>
       </div>
     </div>
     
@@ -46,30 +58,33 @@
                 </div>
               </div>
             </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 </template>
 
 <script>
-import { ref } from 'vue'
-import axios from 'axios';
-import { myApi } from '../utils/backend-api';
+import { ref } from "vue";
+import axios from "axios";
+import { myApi } from "../utils/backend-api";
 
 export default {
   data() {
     return {
       info: null,
       search_word: "",
-    }
+    };
   },
-  created(){
+  created() {
     this.reload();
     this.timer= setInterval(this.reload,1000);
   },
 
-  methods : {
+  methods: {
     async reload() {
+<<<<<<< HEAD
       const {data:d}=await myApi.get("/roomProducts")
       this.info = d.products
     },
@@ -92,19 +107,25 @@ export default {
     clearInterval(this.timer);
   }
 
+=======
+      const { data: d } = await myApi.get("/products");
+      this.info = d.products;
+    },
+  },
+>>>>>>> c1f66ad943899bb974b03b6a0232771c9ca7b969
 };
 
 
 
 </script>
 
-
-
 <style scoped>
- @import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
-  /*this is hellowrold*/
-@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"); 
-* {box-sizing: border-box;}
+@import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
+/*this is hellowrold*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -126,10 +147,8 @@ body {
   font-size: 17px;
 }
 
-
-
 .topnav a#title.active {
-  background-color: #F7A072;
+  background-color: #f7a072;
   font-weight: bold;
   color: white;
 }
@@ -138,18 +157,18 @@ body {
   float: right;
 }
 
-.topnav input[type=text] {
+.topnav input[type="text"] {
   padding: 6px;
   margin-top: 8px;
   font-size: 17px;
   border: 2px solid var(--lt-color-gray-300);
   border-radius: 10px 0px 0px 10px;
 }
-.topnav input[type=text]:hover {
+.topnav input[type="text"]:hover {
   border: 2px solid var(--lt-color-gray-400);
 }
 
-.topnav input[type=text]:focus-border {
+.topnav input[type="text"]:focus-border {
   border: 2px solid var(--lt-color-gray-400);
 }
 
@@ -177,7 +196,9 @@ body {
   .topnav .search-container {
     float: none;
   }
-  .topnav a#title, .topnav input[type=text], .topnav .search-container button {
+  .topnav a#title,
+  .topnav input[type="text"],
+  .topnav .search-container button {
     float: none;
     display: block;
     text-align: left;
@@ -185,22 +206,21 @@ body {
     margin: 0;
     padding: 14px;
   }
-  .topnav input[type=text] {
-    border: 1px solid #ccc;  
+  .topnav input[type="text"] {
+    border: 1px solid #ccc;
   }
-
 }
 
-
 .card-btn {
-  margin:0px 2px 0px 2px;
+  margin: 0px 2px 0px 2px;
 }
 
 #cantidad {
-  color: var(--lt-color-gray-400)
+  color: var(--lt-color-gray-400);
 }
 
-#carro, #search {
+#carro,
+#search {
   width: 40px;
 }
 .iconimg{
