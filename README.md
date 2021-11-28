@@ -10,47 +10,31 @@ This projectly is a collaborative shopping web app that syncs with other devices
 - **Not updated in real time**: In a traditional shopping cart, if one users is buying and adds products the other user can't see them unless he manually refreshes the page. What if one users checks out the shopping cart without syncing the products, well, you end up not buying what you wanted!! 
 
 ## How we built it
-CartFresh is developed with state of the art technologies. A node.js powered backend and Vue.js frontend. The database uses Heroku DBaaS (Database as a service).
+### Tech
+CartFresh is developed with state of the art technologies. A node.js powered backend and Vue.js frontend. The database uses Heroku Postgres DBaaS.
 
 ### Backend
-When designing the back end, we wanted to have the utmost security while also having the fastest speeds. Google cloud functions allowed for us to use intelligent AI libraries authored by Python while also integrating in a nice seamless front-end fashion. they also allow for intelligent integration with the database. The data is stored in an encrypted format open the GCP storage which prevents hackers to access private images. In order to access the database, one needs a specific key which further prevent security.
+Our real time API is developed in node.js, using a model-route-controller-services code structure.
 
 ### Frontend
-
+The Vue.js frontend is developed with two simple views, each view has two components.
+For styling we make use of a CSS framework, tailwind.css.  
+To consume the API, front and back is connected via a promise based HTTP client, Axios, directly integrated in Vue.js.
 
 ## Challenges we ran into
 ### Problems
-When building the AI model for the facial recognition I first used face_recognition library which allowed me to quickly identify nature points on a face to detect the identity. the problem was when integrating this with the GCP function it resulted in an error because the library is not supported which is why I used LBHR from cv2 which is part of their face cascade classifier program. this allowed for a intelligent and accurate facial recognition. As of prelimerary tests the accuracy is upward of 98%.
+Deciding what project to do was tough, we started another two projects because of our curious minds, not focusing our efforts in finishing one challenge, but the end goal was accomplished: coding for fun as a team.
 
-### Experience and Areas of Expertise
-The biggest challenge we had with Loginly was that it was a project outside of our areas of expertise. Some of us had never done front end work before, while for others of us we had little experience with accessing and using databases. Our team also consisted of both experienced coders and those who've just begun their coding journey, so time had to be invested into not just doing the project but learning various concepts from the bottom up.
-
-### Communication and Team Building
-Each one of our team members worked from separate parts of the globe, even having a 9 hour time zone difference between some of our team members.
+### Teammates background
+Having different levels of experience and areas of expertise within the team was challenging at first. In the end it created a sinergy, people for infra, backend and frontend.
 
 ## Accomplishments that we're proud of
-Each individual portion of the project took time to complete, but connecting everything into a completed system was the most satisfying accomplishment of our team’s project. Connecting user data from the web page to servers where the facial recognition software did its work to referencing the login page and successfully completing a login was amazing. Additionally, the team elements of working around time zone and experience barriers, and being able to organize our project fluidly was another huge success.
+Restarting the project twice and finally having something. Persistence to finish.
 
 ## What we learned
-Each one of us came into this hackathon with different skills and backgrounds; similarly, each of us will leave with our own unique experiences and takeaways. In the end, the challenges we faced amounted to an experience where each of us learned new coding skills and how to work together to overcome various barriers. Some of the skills we learned included:
+- Saving time using DBaaS instead of deploying and managing our own DBs. DBeaver to create tables and populate the content.
+- Teamwork, we managed to coordinate our efforts, even if we had to restart our projects. 
+- Version control, how to delete a commit in git 😁.
 
-front end development using frameworks like Bootstrap
-
-web development and web requests
-
-database management.
-
-We also learned how to organize ourselves to overcome the time zone differences and designate tasks as well as how to communicate our ideas properly to get as much done as fast as possible.
-
-What's next for Loginly
-Loginly is just the framework for a more secure and easy to use login system. Additional functionalities can be added in the future such as:
-
-a failsafe login in case a photo login doesn't work
-
-adding in additional account information when signing up
-
-a design overhaul for the web page
-
-Speeding up the processing time for the facial recognition software
-
-## What's next for CartFresh: a collaboratevily real-time shopping experience
+## What's next for CartFresh
+Integration of this service in other popular shopping platforms.
