@@ -1,23 +1,9 @@
 <template>
 <header class="text-gray-600 body-font">
-      <!--// <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-      //   <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-      //     <span class="ml-3 text-xl">Shopper</span>
-      //   </a>
-      //   <div style="float:right;">
-      //     <form action="/action_page.php">
-      //     <input type="text" placeholder="Search.." name="search">
-      //     <button type="submit">Submit</button>
-      //     </form>
-      //     <button style="align-items: flex-end;" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-      //       <img src="./../assets/shopping-cart-solid.svg" alt="" width="10%">
-      //     </button>
-      //   </div>
-      /</div>-->
       <div class="topnav">
       <a class="active animate__rubberBand" href="/">Shopper</a>      
       <div class="search-container">
-        <form action="/action_page.php">
+        <form>
           <input type="text" placeholder="Search.." name="search">
           <button type="submit"><img src="./../assets/shopping-cart-solid.svg" alt="" width="29em"></button>
           <button type="carro" id="carro"><img src="./../assets/search-solid.svg" alt="" width="29em"></button>
@@ -28,21 +14,42 @@
     <section class="text-gray-600 body-font">
       <div class="container px-5 py-24 mx-auto">
         <div class="flex flex-wrap -m-4">
-            <div class="p-4 md:w-1/4">
+
+
+          <!--targeta here--> 
+            <div class="p-4 md:w-1/4" v-for="item in info" :key="item">
               <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/722x402" alt="blog">
+                <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="{{ item.imageurl }}" alt="blog">
                 <div class="p-6">
                   <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Fruits</h2>
-                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">aaaaaa</h1>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{ item.name }}</h1>
                   <p class="leading-relaxed mb-3"></p>
-                  <div class="flex items-center flex-wrap justify-content:right">
+                  <div class="items-center flex">
                     
-                    <button style="justify-content: right" class="justify-content:right inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+                    <button  style="float:right;" class="card-btn inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
                       <img src="./../assets/minus-solid.svg" alt="" width="25em"> 
                     </button>
-                    <button style="justify-content: right" class="float:right inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+                    <button  style="float:right;" class="card-btn inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
                       <img src="./../assets/plus-solid.svg" alt="" width="25em"> 
                     </button>
+                    <button  style="float:right;" class="card-btn inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+                      <img src="./../assets/trash-alt-solid.svg" alt="" width="25em"> 
+                    </button>
+                    <select name="quantity" id="cantidad">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                      <p class="price">
+                        {{ item.pice }}
+                      </p>
                   </div>
                 </div>
               </div>
@@ -90,7 +97,7 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: var(--lt-color-gray-100);
+  background-color: var(--lt-color-gray-200);
 }
 
 .topnav a {
@@ -168,5 +175,15 @@ body {
   .topnav input[type=text] {
     border: 1px solid #ccc;  
   }
+
+}
+
+
+.card-btn {
+  margin:0px 2px 0px 2px;
+}
+
+#cantidad {
+  color: var(--lt-color-gray-400)
 }
 </style>
