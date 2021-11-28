@@ -1,11 +1,11 @@
 ## Inspiration
-This project has been inspired by some online shopping portals like Mercadona or glovo, but addding a real-time user interaction.This project allows people go shopping virtually with a great expericence without sync problems or products lost.
+This project has been inspired by some online shopping portals like Mercadona or Glovo, but adding a real-time user interaction. This project allows people to go shopping virtually without sync problems or products lost, creating a rich user experience.
 
 ## What it does
-This projectly is a collaborative shopping web app that syncs with other devices on the same room session. Users experience instant updates whenever a user in the same session changes something. The actual problems that we discovered from actual online servicies for buying products are:
-- **Inefficient:**: Pages are sometimes comfusing, not well sorted or unorganized.
-- **Not user-friendly**: Is commmon to see servicies that have complex options (advanced) that requires technique or so. The idea is to simplify the user's problems as Amazon does: with 1 click.
-- **Not updated at real time**: Imagine a situation when you and your mother are buying the food for the week, and you decide to add something at the last time before she checkouts, whithout refreshing. The application does the billing and the checkout with her items list. 
+This projectly is a collaborative shopping web app that syncs with other devices on the same room session. Users experience instant updates whenever a user in the same session changes something. The actual problems that we discovered from actual online services for buying products are:
+- **Inefficient:**: Pages are sometimes confusing, unsorted or unorganized.
+- **Not user-friendly**: Is commmon to see services that have complex options (advanced) that requires a higher learning curve. The idea is to simplify the user's problems as Amazon does: with only 1 click.
+- **Not updated at real time**: In a traditional shopping cart, if one users is buying and adds products the other can't see them unless he manually refreshes the page. What if one users checks out the shopping cart without syncing the products, well, you end up not buying what you wanted!! 
 
 ## How we built it
 Loginly was created in several steps: front end development where users sign up or login, and the backend development of the facial recognition software as well as the system’s connection to a database to retrieve existing login information.
