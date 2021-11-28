@@ -7,7 +7,7 @@ This project has been inspired by some online shopping portals like Mercadona or
 
 ## What it does
 
-FreshCart is a collaborative shopping web app that syncs with other devices on the same room session. Users experience instant updates whenever a user in the same session changes something. The actual problems that we discovered from actual online services for buying products are:
+CartFresh is a collaborative shopping web app that syncs with other devices on the same room session. Users experience instant updates whenever a user in the same session changes something. The actual problems that we discovered from online services for buying products are:
 
 - **Inefficient:**: Pages are sometimes confusing, unsorted, or unorganized.
 
