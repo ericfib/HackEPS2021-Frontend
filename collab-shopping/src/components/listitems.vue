@@ -40,11 +40,12 @@ const count = ref(0)
 
 
 
-          <tr v-for="item in info" :key="item">
-            <td class="px-4 py-3">{{name}}</td>
-            <td class="px-4 py-3">{{description}}</td>
-            <td class="px-4 py-3">{{quantity}}</td>
-            <td class="px-4 py-3 text-lg text-gray-900">{{price}} </td>
+          <tr v-for="item in items" :key="item">
+            <td class="px-4 py-3">{{item.name}}</td>
+            <td class="px-4 py-3">{{item.description}}</td>
+            <td class="px-4 py-3">{{item.quantity}}</td>ç
+            
+            <td class="px-4 py-3 text-lg text-gray-900">{{item.price}}</td>
           </tr>
 
 
