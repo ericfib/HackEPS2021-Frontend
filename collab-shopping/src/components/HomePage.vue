@@ -21,36 +21,26 @@
           <!--targeta here--> 
             <div class="p-4 md:w-1/4" v-for="item in info" :key="item">
               <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="{{ item.imageurl }}" alt="blog">
+                <img class="lg:h-48 md:h-36 w-full object-cover object-center" :src='item.ProdImageURL'  alt="blog">
                 <div class="p-6">
                   <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Fruits</h2>
-                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{ item.name }}</h1>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{ item.ProdName }}</h1>
                   <p class="leading-relaxed mb-3"></p>
                   <div class="items-center flex">
                     
-                    <button  style="float:right;" class="card-btn inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-                      <img src="./../assets/minus-solid.svg" alt="" width="25em"> 
+                    <button @click="addProduct(item.ProdID, (item.RoomProdQuantity||0)-1)" style="float:right;" class="card-btn inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+                      <img class="iconimg" src="./../assets/minus-solid.svg" alt="" width="25px"> 
                     </button>
-                    <button  style="float:right;" class="card-btn inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-                      <img src="./../assets/plus-solid.svg" alt="" width="25em"> 
+                    <button @click="addProduct(item.ProdID,(item.RoomProdQuantity||0)+1)"
+                    style="float:right;" class="card-btn inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+                      <img class="iconimg" src="./../assets/plus-solid.svg" alt="" width="25px"> 
                     </button>
-                    <button  style="float:right;" class="card-btn inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-                      <img src="./../assets/trash-alt-solid.svg" alt="" width="25em"> 
+                    <button @click="addProduct(item.ProdID,(item.RoomProdQuantity||0)-(item.RoomProdQuantity||0))" style="float:right;" class="card-btn inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+                      <img class="iconimg" src="./../assets/trash-alt-solid.svg" alt="" width="25px"> 
                     </button>
-                    <select name="quantity" id="cantidad">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                    </select>
+                    {{ item.RoomProdQuantity || 0}} ud&ensp;
                       <p class="price">
-                        {{ item.pice }}
+                        {{ item.ProdPrice }}
                       </p>
                   </div>
                 </div>
@@ -75,16 +65,37 @@ export default {
   },
   created(){
     this.reload();
+    this.timer= setInterval(this.reload,1000);
   },
 
   methods : {
     async reload() {
-      const {data:d}=await myApi.get("/products")
+      const {data:d}=await myApi.get("/roomProducts")
       this.info = d.products
-    }
+    },
+    addProduct(id,quantity){
+      console.log('hola')
+      myApi.post("/roomProducts",{
+        prodId: id,
+        quantity: quantity
+        } )
+    },
+    SubstractProducts(id,quantity) {
+      console.log('hola')
+      myApi.post("/roomProducts",{
+        prodId: id,
+        quantity: quantity
+        } )
+    },
   },
+  beforeUnmount(){
+    clearInterval(this.timer);
+  }
 
 };
+
+
+
 </script>
 
 
@@ -192,4 +203,8 @@ body {
 #carro, #search {
   width: 40px;
 }
+.iconimg{
+  width:25px;
+}
+
 </style>
