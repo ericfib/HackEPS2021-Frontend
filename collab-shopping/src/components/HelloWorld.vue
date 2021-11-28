@@ -4,7 +4,7 @@
       <a class="active animate__rubberBand" href="/">Shopper</a>      
       <div class="search-container">
         <form>
-          <input type="text" placeholder="Search.." name="search">
+          <input type="text" placeholder="Search.." name="search" v-model="search_word">
           <button type="submit"><img src="./../assets/shopping-cart-solid.svg" alt="" width="29em"></button>
           <button type="carro" id="carro"><img src="./../assets/search-solid.svg" alt="" width="29em"></button>
         </form>
@@ -68,6 +68,7 @@ export default {
   data() {
     return {
       info: null,
+      search_word: "",
     }
   },
   created(){
