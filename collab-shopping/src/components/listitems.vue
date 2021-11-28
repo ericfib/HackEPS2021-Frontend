@@ -7,9 +7,10 @@ const count = ref(0)
 </script>
 
 <template>
+<!-- header opcional?--> 
   <button @click="goTo('/')">Go to home</button>
 
-
+    
 
   </template>
   <style>

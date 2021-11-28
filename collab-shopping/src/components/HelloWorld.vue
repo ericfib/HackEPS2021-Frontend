@@ -5,8 +5,8 @@
       <div class="search-container">
         <form>
           <input type="text" placeholder="Search.." name="search" v-model="search_word">
-          <button type="submit"><img src="./../assets/shopping-cart-solid.svg" alt="" width="29em"></button>
-          <button type="carro" id="carro"><img src="./../assets/search-solid.svg" alt="" width="29em"></button>
+          <button type="submit" id="search"><img src="./../assets/shopping-cart-solid.svg" alt=""></button>
+          <button type="carro" id="carro"><img src="./../assets/search-solid.svg" alt=""></button>
         </form>
       </div>
     </div>
@@ -186,5 +186,9 @@ body {
 
 #cantidad {
   color: var(--lt-color-gray-400)
+}
+
+#carro, #search {
+  width: 40px;
 }
 </style>
